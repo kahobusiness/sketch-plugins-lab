@@ -1,0 +1,6 @@
+framework module SketchPluginsLab {
+  umbrella header "SketchPluginsLab.h"
+
+  export *
+  module * { export * }
+}

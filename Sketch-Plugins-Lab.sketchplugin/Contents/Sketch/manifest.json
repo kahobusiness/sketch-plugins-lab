@@ -1,0 +1,52 @@
+{
+  "author" : "吴嘉豪",
+  "identifier" : "com.example.sketch.d6d40b35-57fe-44b1-853f-e8ec451c8253",
+  "version" : "1.0",
+  "description" : "My Sketch Plugins Lab",
+  "authorEmail" : "",
+  "name" : "Sketch Plugins Lab",
+
+  "commands" : [
+    {
+      "script" : "script.js",
+      "name" : "Say Hello",
+      "identifier" : "sayHello",
+      "handler" : "sayHello",
+    },
+    {
+      "script" : "script.js",
+      "name" : "Say Hi",
+      "identifier" : "sayHi",
+      "handler" : "sayHi",
+    },
+    {
+      "script" : "replaceSelectedText.js",
+      "name" : "批量替换选中文本",
+      "identifier" : "replaceSelectedText",
+      "handler" : "replaceSelectedText",
+    },
+    {
+      "script" : "toolbar.js",
+      "name" : "显示工具栏",
+      "identifier" : "showToolbar",
+      "handlers" : {
+          "run" : "showToolbar",
+          "actions": {
+          "SelectionChanged.finish": "onSelectionChanged",
+        }
+      },
+    },
+  ],
+
+  "menu" : {
+    "title" : "Sketch Plugins Lab",
+    "items" : [
+      "sayHello",
+      "sayHi",
+      "-",
+      "replaceSelectedText",
+      "-",
+      "showToolbar",
+    ]
+  }
+}
